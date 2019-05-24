@@ -25,22 +25,22 @@ const config = {
     jwtSecret: process.env.JWTSECRET || '',
     masterKey: process.env.MASTERKEY || '',
   },
-  // development: {
-  //   mysql: {
-  //     database: 'db-demo',
-  //     username: 'root',
-  //     password: null,
-  //     host: 'localhost'
-  //   }
-  // },
   development: {
     mysql: {
-      database: 'sql12293127',
-      username: 'sql12293127',
-      password: 'aINMuyTqEE',
-      host: 'sql12.freemysqlhosting.net'
+      database: 'db-demo',
+      username: 'root',
+      password: null,
+      host: 'localhost'
     }
   },
+  // development: {
+  //   mysql: {
+  //     database: 'sql12293127',
+  //     username: 'sql12293127',
+  //     password: 'aINMuyTqEE',
+  //     host: 'sql12.freemysqlhosting.net'
+  //   }
+  // },
   production: {
     ip: process.env.IP || undefined,
     port: process.env.PORT || 8080,
