@@ -38,7 +38,7 @@ const config = {
       database: 'sql12293127',
       username: 'sql12293127',
       password: 'aINMuyTqEE',
-      host: 'sql12.freemysqlhosting.net	'
+      host: 'sql12.freemysqlhosting.net'
     }
   },
   production: {
