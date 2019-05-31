@@ -1,9 +1,9 @@
 import db from './../../services/sequelize'
-const Order = db.Order
+const OrderDetail = db.OrderDetail
 
 export const create = (req, res) => {
     const body = req.body
-    Order.create(body).then(data => {
+    OrderDetail.create(body).then(data => {
         res.status(200).json(data)
     }).catch(err => {
         res.status(404).send(err)
@@ -11,7 +11,7 @@ export const create = (req, res) => {
 }
 
 export const index = (req, res) => {
-    Order.findAll().then(data => {
+    OrderDetail.findAll().then(data => {
         res.status(200).json(data)
     }).catch(err => {
         res.status(404).send(err)
@@ -21,7 +21,7 @@ export const index = (req, res) => {
 export const update = (req, res) => {
     const id = req.params.id
     const body = req.body
-    Order.update(body, { where: { id: id }}).then(data => {
+    OrderDetail.update(body, { where: { id: id }}).then(data => {
         res.status(200).json(data)
     }).catch(err => {
         res.status(404).send(err)
@@ -30,7 +30,7 @@ export const update = (req, res) => {
 
 export const show = (req, res) => {
     const id = req.params.id
-    Order.findByPk(id).then(data => {
+    OrderDetail.findByPk(id).then(data => {
         res.status(200).json(data)
     }).catch(err => {
         res.status(404).send(err)
@@ -39,7 +39,7 @@ export const show = (req, res) => {
 
 export const remove = (req, res) => {
     const id = req.params.id
-    Order.destroy({ where: { id: id } }).then(data => {
+    OrderDetail.destroy({ where: { id: id } }).then(data => {
         res.status(200).send()
     }).catch(err => {
         res.status(404).send(err)

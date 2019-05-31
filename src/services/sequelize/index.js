@@ -7,12 +7,13 @@ const sequelize = new Sequelize(mysql.database, mysql.username, mysql.password,
 var userModel = sequelize['import']('../../api/user/model');
 var productModel = sequelize['import']('../../api/product/model');
 var supplierModel = sequelize['import']('../../api/supplier/model');
-
+var orderModel = sequelize['import']('../../api/order/model');
 
 const db = {
     User: userModel,
     Product: productModel,
-    Supplier: supplierModel
+    Supplier: supplierModel,
+    Order: orderModel
 }
 
 Object.keys(db).forEach(modelName => {

@@ -1,6 +1,5 @@
 import db from './../../services/sequelize'
 const Product = db.Product
-// const User = db.User
 
 export const create = (req, res) => {
     const body = req.body
